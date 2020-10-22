@@ -6,7 +6,7 @@ using MDS00;
 
 namespace M07
 {
-    public partial class XtraForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
     {
         public XtraForm1()
         {
