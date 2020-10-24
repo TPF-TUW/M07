@@ -172,7 +172,7 @@ namespace M07
             sbSQL.Append("     CROSS APPLY(SELECT Code, Name FROM Vendor WHERE OIDVEND = IVD.OIDVEND) AS VD ");
             sbSQL.Append("WHERE (OIDITEM = '" + txeID.Text.Trim() + "') ");
             sbSQL.Append("ORDER BY OIDVENDItem ");
-            new ObjDevEx.setGridControl(gcVendor, gvVendor, sbSQL).getData(false, false, true, true);
+            new ObjDevEx.setGridControl(gcVendor, gvVendor, sbSQL).getData(false, false, false, true);
             dtVendor = new DBQuery(sbSQL).getDataTable();
             if (gvVendor.Columns.Count > 0)
             {
@@ -836,7 +836,7 @@ namespace M07
             sbSQL.Append("     CROSS APPLY(SELECT Code, Name FROM Vendor WHERE OIDVEND = IVD.OIDVEND) AS VD ");
             sbSQL.Append("WHERE (OIDITEM = '" + txeID.Text.Trim() + "') ");
             sbSQL.Append("ORDER BY OIDVENDItem ");
-            new ObjDevEx.setGridControl(gcVendor, gvVendor, sbSQL).getData(false, false, true, true);
+            new ObjDevEx.setGridControl(gcVendor, gvVendor, sbSQL).getData(false, false, false, true);
             dtVendor = new DBQuery(sbSQL).getDataTable();
             if (gvVendor.Columns.Count > 0)
             {
