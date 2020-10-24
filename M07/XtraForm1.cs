@@ -390,7 +390,7 @@ namespace M07
                     }
 
                     //******** save Items table ************
-                    sbSQL.Append("IF NOT EXISTS(SELECT OIDITEM FROM Items WHERE MaterialType = '" + MaterialType + "' AND Code = N'" + glueCode.Text.Trim() + "') ");
+                    sbSQL.Append("IF NOT EXISTS(SELECT OIDITEM FROM Items WHERE MaterialType = '" + MaterialType + "' AND Code = N'" + glueCode.Text.Trim().Replace("'", "''") + "') ");
                     sbSQL.Append(" BEGIN ");
                     sbSQL.Append("  INSERT INTO Items(MaterialType, Code, Description, Composition, WeightOrMoreDetail, ModelNo, ModelName, OIDCATEGORY, OIDSTYLE, OIDCOLOR, OIDSIZE, OIDCUST, BusinessUnit, Season, ClassType, Branch,  ");
                     sbSQL.Append("       CostSheetNo, StdPrice, FirstVendor, PurchaseType, PurchaseLoss, TaxBenefits, FirstReceiptDate, DefaultVendor, MinStock, MaxStock, StockShelfLife, StdCost, DefaultUnit, PathFile, LabTestNo, ApprovedLabDate, QCInspection, ");
@@ -425,7 +425,7 @@ namespace M07
                     {
                         
                         sbSQL.Clear();
-                        sbSQL.Append("SELECT OIDITEM FROM Items WHERE MaterialType = '" + MaterialType + "' AND Code = N'" + glueCode.Text.Trim() + "'");
+                        sbSQL.Append("SELECT OIDITEM FROM Items WHERE MaterialType = '" + MaterialType + "' AND Code = N'" + glueCode.Text.Trim().Replace("'", "''") + "'");
                         string OIDITEM = new DBQuery(sbSQL).getString();
                         //******** save ItemInspection table ********
                         sbSQL.Clear();
@@ -720,7 +720,7 @@ namespace M07
             sbSQL.Append("       DefaultUnit, PathFile, LabTestNo, ApprovedLabDate, QCInspection, CreatedBy, CreatedDate, ");
             sbSQL.Append("       UpdatedBy, UpdatedDate ");
             sbSQL.Append("FROM Items ");
-            sbSQL.Append("WHERE (Code = N'" + strCODE + "') ");
+            sbSQL.Append("WHERE (Code = N'" + strCODE.Replace("'", "''") + "') ");
             string[] arrItem = new DBQuery(sbSQL).getMultipleValue();
             if (arrItem.Length > 0)
             {
@@ -881,7 +881,7 @@ namespace M07
             {
                 string Material = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
                 StringBuilder sbSQLx = new StringBuilder();
-                sbSQLx.Append("SELECT OIDITEM FROM Items WHERE (MaterialType = '" + Material + "') AND (Code=N'" + gCode + "') ");
+                sbSQLx.Append("SELECT OIDITEM FROM Items WHERE (MaterialType = '" + Material + "') AND (Code=N'" + gCode.Replace("'", "''") + "') ");
                 string chkCode = new DBQuery(sbSQLx).getString();
 
                 if (chkCode == "")
@@ -893,7 +893,7 @@ namespace M07
                     sbSQLx.Append("UNION ALL ");
                     sbSQLx.Append("SELECT N'' AS Code, N'' AS Description ");
                     sbSQLx.Append("UNION ALL ");
-                    sbSQLx.Append("SELECT N'" + gCode + "' AS Code, N'' AS Description ");
+                    sbSQLx.Append("SELECT N'" + gCode.Replace("'", "''") + "' AS Code, N'' AS Description ");
                     sbSQLx.Append("ORDER BY Code, Description ");
                     new ObjDevEx.setGridLookUpEdit(glueCode, sbSQLx, "Code", "Code").getData(true);
 
