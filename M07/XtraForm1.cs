@@ -126,6 +126,19 @@ namespace M07
             txeUPDATE.Text = "0";
             txeUDATE.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
+            //**************************************
+            slueFirstVendor.ReadOnly = false;
+            txeMatDetails.ReadOnly = false;
+            txeMatCode.ReadOnly = false;
+            txeSMPLLotNo.ReadOnly = false;
+            txePrice.ReadOnly = false;
+            txeCurrency.ReadOnly = false;
+            rgPurchase.ReadOnly = false;
+            rgTax.ReadOnly = false;
+            txePurchaseLoss.ReadOnly = false;
+            dteFirstReceiptDate.ReadOnly = false;
+            //**************************************
+
             dtVendor.Rows.Clear();
             tabbedControlGroup1.SelectedTabPage = layoutControlGroup1; //เลือกแท็บ Main
         }
@@ -688,6 +701,19 @@ namespace M07
             txeUPDATE.Text = "0";
             txeUDATE.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
+            //**************************************
+            slueFirstVendor.ReadOnly = false;
+            txeMatDetails.ReadOnly = false;
+            txeMatCode.ReadOnly = false;
+            txeSMPLLotNo.ReadOnly = false;
+            txePrice.ReadOnly = false;
+            txeCurrency.ReadOnly = false;
+            rgPurchase.ReadOnly = false;
+            rgTax.ReadOnly = false;
+            txePurchaseLoss.ReadOnly = false;
+            dteFirstReceiptDate.ReadOnly = false;
+            //**************************************
+
             StringBuilder sbSQL = new StringBuilder();
             sbSQL.Append("SELECT OIDITEM, MaterialType, Code, Description, Composition, WeightOrMoreDetail, ModelNo, ModelName, OIDCATEGORY, OIDSTYLE, OIDCOLOR, OIDSIZE, OIDCUST, BusinessUnit, Season, ClassType, Branch, CostSheetNo,  ");
             sbSQL.Append("       FORMAT(StdPrice, '###0.####') AS StdPrice, FirstVendor, PurchaseType, TaxBenefits, FORMAT(PurchaseLoss, '###0.##') AS PurchaseLoss, FirstReceiptDate, DefaultVendor, MinStock, MaxStock, StockShelfLife, FORMAT(StdCost, '###0.####') AS StdCost, ");
@@ -770,6 +796,19 @@ namespace M07
                 txeUPDATE.Text = arrItem[36];
                 txeUDATE.Text = arrItem[37];
 
+                //**************************************
+                slueFirstVendor.ReadOnly = true;
+                txeMatDetails.ReadOnly = true;
+                txeMatCode.ReadOnly = true;
+                txeSMPLLotNo.ReadOnly = true;
+                txePrice.ReadOnly = true;
+                txeCurrency.ReadOnly = true;
+                rgPurchase.ReadOnly = true;
+                rgTax.ReadOnly = true;
+                txePurchaseLoss.ReadOnly = true;
+                dteFirstReceiptDate.ReadOnly = true;
+                //**************************************
+
             }
 
             sbSQL.Clear();
@@ -778,22 +817,6 @@ namespace M07
             sbSQL.Append("WHERE (OIDITEM = '" + txeID.Text.Trim() + "') ");
             sbSQL.Append("ORDER BY OIDCONDQC ");
             DataTable dtQC = new DBQuery(sbSQL).getDataTable();
-
-            //MessageBox.Show(clbQC.ItemCount.ToString());
-
-            //for (int iz = 0; iz < clbQC.ItemCount; iz++)
-            //{
-            //    foreach (DataRow row in dtQC.Rows)
-            //    {
-            //        MessageBox.Show("DT:" + row["OIDCONDQC"].ToString() + "CHK:" + clbQC.Items[clbQC.ValueMember].Value.ToString());
-            //        if (row["OIDCONDQC"].ToString() == clbQC.Items[clbQC.ValueMember].Value.ToString())
-            //        {
-            //            clbQC.SetItemCheckState(iz, CheckState.Checked);
-            //            break;
-            //        }
-            //    }
-
-            //}
 
             foreach (DataRow row in dtQC.Rows)
             {
@@ -922,14 +945,6 @@ namespace M07
         private void slueDefaultVendor_EditValueChanged(object sender, EventArgs e)
         {
             slueVendorCode.EditValue = slueDefaultVendor.EditValue.ToString();
-            //if (slueVendorCode.Text.Trim() != "")
-            //{
-            //    txeVendorName.Text = slueVendorCode.Properties.View.GetFocusedRowCellValue("Name").ToString();
-            //}
-            //else
-            //{
-            //    txeVendorName.Text = "";
-            //}
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
