@@ -235,7 +235,7 @@ namespace M07
             sbSQL.Clear();
             sbSQL.Append("SELECT OIDBranch AS ID, Branch ");
             sbSQL.Append("FROM  Branch ");
-            sbSQL.Append("ORDER BY Branch ");
+            sbSQL.Append("ORDER BY OIDBranch ");
             new ObjDevEx.setGridLookUpEdit(glueBranch, sbSQL, "Branch", "ID").getData(true);
 
             sbSQL.Clear();
