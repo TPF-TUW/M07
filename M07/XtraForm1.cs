@@ -11,6 +11,7 @@ using System.CodeDom;
 using DevExpress.XtraGrid.Views.Grid;
 using System.Drawing;
 using DevExpress.XtraPrinting;
+using DevExpress.XtraEditors;
 
 namespace M07
 {
@@ -19,6 +20,7 @@ namespace M07
         private Functionality.Function FUNC = new Functionality.Function();
         private const string imgPathFile = @"\\172.16.0.190\MDS_Project\MDS\Pictures\";
         private DataTable dtVendor = new DataTable();
+        private string selCode = "";
         public XtraForm1()
         {
             InitializeComponent();
@@ -42,6 +44,10 @@ namespace M07
         {
             tabbedControlGroup1.SelectedTabPage = layoutControlGroup1; //เลือกแท็บ Main
             rgMaterial.SelectedIndex = 0;
+
+            glueCode.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            glueCode.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.True;
+
             bbiNew.PerformClick();
         }
 
@@ -138,6 +144,7 @@ namespace M07
             txePurchaseLoss.ReadOnly = false;
             dteFirstReceiptDate.ReadOnly = false;
             //**************************************
+            selCode = "";
 
             dtVendor.Rows.Clear();
             tabbedControlGroup1.SelectedTabPage = layoutControlGroup1; //เลือกแท็บ Main
@@ -151,8 +158,6 @@ namespace M07
             sbSQL.Append("SELECT Code, Description ");
             sbSQL.Append("FROM  Items ");
             sbSQL.Append("WHERE (MaterialType = '" + Material + "')");
-            sbSQL.Append("UNION ALL ");
-            sbSQL.Append("SELECT N'' AS Code, N'' AS Description ");
             sbSQL.Append("ORDER BY Code ");
             new ObjDevEx.setGridLookUpEdit(glueCode, sbSQL, "Code", "Code").getData(true);
 
@@ -713,6 +718,7 @@ namespace M07
             txePurchaseLoss.ReadOnly = false;
             dteFirstReceiptDate.ReadOnly = false;
             //**************************************
+            //selCode = "";
 
             StringBuilder sbSQL = new StringBuilder();
             sbSQL.Append("SELECT OIDITEM, MaterialType, Code, Description, Composition, WeightOrMoreDetail, ModelNo, ModelName, OIDCATEGORY, OIDSTYLE, OIDCOLOR, OIDSIZE, OIDCUST, BusinessUnit, Season, ClassType, Branch, CostSheetNo,  ");
@@ -856,13 +862,13 @@ namespace M07
             gvVendor.Columns[1].Visible = false;
             gvVendor.Columns[4].Visible = false;
 
-
+            txeDescription.Focus();
         }
 
         private void glueCode_EditValueChanged(object sender, EventArgs e)
         {
-            txeDescription.Focus();
-            LoadCode(glueCode.Text);
+            //txeDescription.Focus();
+            //LoadCode(glueCode.Text);
         }
 
         private void glueCode_KeyDown(object sender, KeyEventArgs e)
@@ -875,35 +881,43 @@ namespace M07
 
         private void glueCode_LostFocus(object sender, EventArgs e)
         {
-            string gCode = glueCode.Text.ToUpper().Trim();
-
-            if (glueCode.Text != "" && rgMaterial.SelectedIndex > -1)
+            if (glueCode.Text.Trim() != "" && glueCode.Text.ToUpper().Trim() != selCode)
             {
-                string Material = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
-                StringBuilder sbSQLx = new StringBuilder();
-                sbSQLx.Append("SELECT OIDITEM FROM Items WHERE (MaterialType = '" + Material + "') AND (Code=N'" + gCode.Replace("'", "''") + "') ");
-                string chkCode = new DBQuery(sbSQLx).getString();
-
-                if (chkCode == "")
-                {
-                    sbSQLx.Clear();
-                    sbSQLx.Append("SELECT Code, Description ");
-                    sbSQLx.Append("FROM  Items ");
-                    sbSQLx.Append("WHERE (MaterialType = '" + Material + "')");
-                    sbSQLx.Append("UNION ALL ");
-                    sbSQLx.Append("SELECT N'' AS Code, N'' AS Description ");
-                    sbSQLx.Append("UNION ALL ");
-                    sbSQLx.Append("SELECT N'" + gCode.Replace("'", "''") + "' AS Code, N'' AS Description ");
-                    sbSQLx.Append("ORDER BY Code, Description ");
-                    new ObjDevEx.setGridLookUpEdit(glueCode, sbSQLx, "Code", "Code").getData(true);
-
-                    if (gCode != "")
-                    {
-                        glueCode.Text = gCode;
-                    }
-                }
-
+                glueCode.Text = glueCode.Text.ToUpper().Trim();
+                selCode = glueCode.Text;
+                LoadCode(glueCode.Text);
+                //MessageBox.Show(glueCode.Text);
             }
+
+            //string gCode = glueCode.Text.ToUpper().Trim();
+
+            //if (glueCode.Text != "" && rgMaterial.SelectedIndex > -1)
+            //{
+            //    string Material = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
+            //    StringBuilder sbSQLx = new StringBuilder();
+            //    sbSQLx.Append("SELECT OIDITEM FROM Items WHERE (MaterialType = '" + Material + "') AND (Code=N'" + gCode.Replace("'", "''") + "') ");
+            //    string chkCode = new DBQuery(sbSQLx).getString();
+
+            //    if (chkCode == "")
+            //    {
+            //        sbSQLx.Clear();
+            //        sbSQLx.Append("SELECT Code, Description ");
+            //        sbSQLx.Append("FROM  Items ");
+            //        sbSQLx.Append("WHERE (MaterialType = '" + Material + "')");
+            //        sbSQLx.Append("UNION ALL ");
+            //        sbSQLx.Append("SELECT N'' AS Code, N'' AS Description ");
+            //        sbSQLx.Append("UNION ALL ");
+            //        sbSQLx.Append("SELECT N'" + gCode.Replace("'", "''") + "' AS Code, N'' AS Description ");
+            //        sbSQLx.Append("ORDER BY Code, Description ");
+            //        new ObjDevEx.setGridLookUpEdit(glueCode, sbSQLx, "Code", "Code").getData(true);
+
+            //        if (gCode != "")
+            //        {
+            //            glueCode.Text = gCode;
+            //        }
+            //    }
+
+            //}
 
         }
 
@@ -977,6 +991,7 @@ namespace M07
 
             txeRemark.Text = "";
             lblIDVENDItem.Text = "";
+            selCode = "";
 
         }
 
@@ -995,6 +1010,7 @@ namespace M07
 
             txeRemark.Text = "";
             lblIDVENDItem.Text = "";
+            //selCode = "";
 
             if (slueVendorCode.Text.Trim() != "")
             {
@@ -1118,6 +1134,20 @@ namespace M07
                 ShowImage frmIMG = new ShowImage(txePath.Text.Trim());
                 frmIMG.Show();
             }
+        }
+
+        private void glueCode_Closed(object sender, ClosedEventArgs e)
+        {
+            glueCode.Focus();
+            txeDescription.Focus();
+        }
+
+        private void glueCode_ProcessNewValue(object sender, ProcessNewValueEventArgs e)
+        {
+            GridLookUpEdit gridLookup = sender as GridLookUpEdit;
+            if (e.DisplayValue == null) return;
+            string newValue = e.DisplayValue.ToString();
+            if (newValue == String.Empty) return;
         }
     }
 }
