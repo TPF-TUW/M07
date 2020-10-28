@@ -146,6 +146,17 @@ namespace M07
             //**************************************
             selCode = "";
 
+            string Materialx = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
+            StringBuilder sbSQL = new StringBuilder();
+            sbSQL.Append("SELECT OIDCONDQC, ConditionName ");
+            sbSQL.Append("FROM ConditionQC ");
+            sbSQL.Append("WHERE (ItemType = '" + Materialx + "') ");
+            sbSQL.Append("ORDER BY ConditionName ");
+            DataTable drMaterial = new DBQuery(sbSQL).getDataTable();
+            clbQC.ValueMember = "OIDCONDQC";
+            clbQC.DisplayMember = "ConditionName";
+            clbQC.DataSource = drMaterial;
+
             dtVendor.Rows.Clear();
             tabbedControlGroup1.SelectedTabPage = layoutControlGroup1; //เลือกแท็บ Main
         }
@@ -718,9 +729,20 @@ namespace M07
             txePurchaseLoss.ReadOnly = false;
             dteFirstReceiptDate.ReadOnly = false;
             //**************************************
-            //selCode = "";
-
+            string Materialx = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
             StringBuilder sbSQL = new StringBuilder();
+            sbSQL.Append("SELECT OIDCONDQC, ConditionName ");
+            sbSQL.Append("FROM ConditionQC ");
+            sbSQL.Append("WHERE (ItemType = '" + Materialx + "') ");
+            sbSQL.Append("ORDER BY ConditionName ");
+            DataTable drMaterial = new DBQuery(sbSQL).getDataTable();
+            clbQC.ValueMember = "OIDCONDQC";
+            clbQC.DisplayMember = "ConditionName";
+            clbQC.DataSource = drMaterial;
+
+            //selCode = "";
+            sbSQL.Clear();
+            //StringBuilder sbSQL = new StringBuilder();
             sbSQL.Append("SELECT OIDITEM, MaterialType, Code, Description, Composition, WeightOrMoreDetail, ModelNo, ModelName, OIDCATEGORY, OIDSTYLE, OIDCOLOR, OIDSIZE, OIDCUST, BusinessUnit, Season, ClassType, Branch, CostSheetNo,  ");
             sbSQL.Append("       FORMAT(StdPrice, '###0.####') AS StdPrice, FirstVendor, PurchaseType, TaxBenefits, FORMAT(PurchaseLoss, '###0.##') AS PurchaseLoss, FirstReceiptDate, DefaultVendor, MinStock, MaxStock, StockShelfLife, FORMAT(StdCost, '###0.####') AS StdCost, ");
             sbSQL.Append("       DefaultUnit, PathFile, LabTestNo, ApprovedLabDate, QCInspection, CreatedBy, CreatedDate, ");
