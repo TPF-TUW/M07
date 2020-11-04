@@ -15,7 +15,7 @@ using DevExpress.XtraEditors;
 
 namespace M07
 {
-    public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
+    public partial class XtraForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private Functionality.Function FUNC = new Functionality.Function();
         private const string imgPathFile = @"\\172.16.0.190\MDS_Project\MDS\Pictures\";
@@ -1173,5 +1173,6 @@ namespace M07
             string newValue = e.DisplayValue.ToString();
             if (newValue == String.Empty) return;
         }
+
     }
 }
