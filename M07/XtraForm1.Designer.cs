@@ -220,6 +220,7 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar2 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeArrivalLead.Properties)).BeginInit();
@@ -2284,9 +2285,10 @@
             this.bbiPrint,
             this.bbiExcel,
             this.skinDropDownButtonItem1,
-            this.skinPaletteDropDownButtonItem1});
+            this.skinPaletteDropDownButtonItem1,
+            this.barStaticItem1});
             this.ribbonControl2.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl2.MaxItemId = 1;
+            this.ribbonControl2.MaxItemId = 2;
             this.ribbonControl2.Name = "ribbonControl2";
             this.ribbonControl2.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3,
@@ -2325,14 +2327,21 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.skinDropDownButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.skinPaletteDropDownButtonItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // ribbonStatusBar2
             // 
+            this.ribbonStatusBar2.ItemLinks.Add(this.barStaticItem1);
             this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 695);
             this.ribbonStatusBar2.Name = "ribbonStatusBar2";
             this.ribbonStatusBar2.Ribbon = this.ribbonControl2;
             this.ribbonStatusBar2.Size = new System.Drawing.Size(994, 24);
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "[MDS : Merchandise and Development System ] There is a problem. Please contact. [" +
+    " Tel .312 ]";
+            this.barStaticItem1.Id = 1;
+            this.barStaticItem1.Name = "barStaticItem1";
             // 
             // XtraForm1
             // 
@@ -2716,5 +2725,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
     }
 }
