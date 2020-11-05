@@ -54,11 +54,11 @@ namespace M07
         private void NewData()
         {
             //rgMaterial.SelectedIndex = 0;
-            txeID.EditValue = "";
+            txeID.Text = "";
             if (rgMaterial.SelectedIndex > -1)
             { 
                 string Material = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
-                txeID.EditValue = new DBQuery("SELECT CASE WHEN ISNULL(MAX(OIDITEM), '') = '' THEN 1 ELSE MAX(OIDITEM) + 1 END AS NewNo FROM Items WHERE (MaterialType = '" + Material + "') ").getString();
+                txeID.Text = new DBQuery("SELECT CASE WHEN ISNULL(MAX(OIDITEM), '') = '' THEN 1 ELSE MAX(OIDITEM) + 1 END AS NewNo FROM Items WHERE (MaterialType = '" + Material + "') ").getString();
             }
             txeID.Text = "";
             glueCode.EditValue = "";
@@ -618,7 +618,7 @@ namespace M07
         {
             NewData();
             LoadDataMeterial();
-
+            glueCode.Focus();
         }
 
         private void gvVendor_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
@@ -648,99 +648,99 @@ namespace M07
         private void LoadCode(string strCODE)
         {
             strCODE = strCODE.ToUpper().Trim();
-            txeID.Text = "";
-            txeDescription.Text = "";
-            txeComposition.Text = "";
-            txeWeight.Text = "";
-            txeModelNo.Text = "";
-            txeModelName.Text = "";
-            slueCategory.EditValue = "";
-            slueStyle.EditValue = "";
-            slueColor.EditValue = "";
-            slueSize.EditValue = "";
-            slueCustomer.EditValue = "";
-            txeBusinessUnit.Text = "";
-            cbeSeason.EditValue = "";
-            cbeClass.EditValue = "";
-            glueBranch.EditValue = "";
-            txeCostSheet.Text = "";
-            txeStdPrice.Text = "";
+            //txeID.Text = "";
+            //txeDescription.Text = "";
+            //txeComposition.Text = "";
+            //txeWeight.Text = "";
+            //txeModelNo.Text = "";
+            //txeModelName.Text = "";
+            //slueCategory.EditValue = "";
+            //slueStyle.EditValue = "";
+            //slueColor.EditValue = "";
+            //slueSize.EditValue = "";
+            //slueCustomer.EditValue = "";
+            //txeBusinessUnit.Text = "";
+            //cbeSeason.EditValue = "";
+            //cbeClass.EditValue = "";
+            //glueBranch.EditValue = "";
+            //txeCostSheet.Text = "";
+            //txeStdPrice.Text = "";
 
-            slueFirstVendor.EditValue = "";
-            txeMatDetails.Text = "";
-            txeMatCode.Text = "";
-            txeSMPLLotNo.Text = "";
-            txePrice.Text = "";
-            txeCurrency.Text = "";
-            rgPurchase.SelectedIndex = 0;
-            rgTax.SelectedIndex = -1;
-            txePurchaseLoss.Text = "";
-            dteFirstReceiptDate.EditValue = DateTime.Now;
-            slueDefaultVendor.EditValue = "";
+            //slueFirstVendor.EditValue = "";
+            //txeMatDetails.Text = "";
+            //txeMatCode.Text = "";
+            //txeSMPLLotNo.Text = "";
+            //txePrice.Text = "";
+            //txeCurrency.Text = "";
+            //rgPurchase.SelectedIndex = 0;
+            //rgTax.SelectedIndex = -1;
+            //txePurchaseLoss.Text = "";
+            //dteFirstReceiptDate.EditValue = DateTime.Now;
+            //slueDefaultVendor.EditValue = "";
 
-            txeSMPLNo.Text = "";
-            dteRequestDate.EditValue = DateTime.Now;
-            txeSMPLItem.Text = "";
-            txeSMPLPatternNo.Text = "";
-            rgZone.SelectedIndex = 0;
+            //txeSMPLNo.Text = "";
+            //dteRequestDate.EditValue = DateTime.Now;
+            //txeSMPLItem.Text = "";
+            //txeSMPLPatternNo.Text = "";
+            //rgZone.SelectedIndex = 0;
 
-            txeMinStock.Text = "";
-            txeMaxStock.Text = "";
-            txeStockSheifLife.Text = "";
-            txeStdCost.Text = "";
-            slueDefaultUnit.EditValue = "";
-            glueUnit.EditValue = "";
+            //txeMinStock.Text = "";
+            //txeMaxStock.Text = "";
+            //txeStockSheifLife.Text = "";
+            //txeStdCost.Text = "";
+            //slueDefaultUnit.EditValue = "";
+            //glueUnit.EditValue = "";
 
-            picImg.EditValue = "";
-            txePath.Text = "";
+            //picImg.EditValue = "";
+            //txePath.Text = "";
 
-            txeLabTestNo.Text = "";
-            dteApprovedLabDate.EditValue = DateTime.Now;
-            txeQCInspection.Text = "";
-            clbQC.Items.Clear();
+            //txeLabTestNo.Text = "";
+            //dteApprovedLabDate.EditValue = DateTime.Now;
+            //txeQCInspection.Text = "";
+            //clbQC.Items.Clear();
 
-            slueVendorCode.EditValue = "";
-            txeVendorName.Text = "";
-            txeLotSize.Text = "";
-            txeProductionLead.Text = "";
-            txeDeliveryLead.Text = "";
-            txeArrivalLead.Text = "";
-            txePOCancelPeriod.Text = "";
+            //slueVendorCode.EditValue = "";
+            //txeVendorName.Text = "";
+            //txeLotSize.Text = "";
+            //txeProductionLead.Text = "";
+            //txeDeliveryLead.Text = "";
+            //txeArrivalLead.Text = "";
+            //txePOCancelPeriod.Text = "";
 
-            txeLots1.Text = "";
-            txeLots2.Text = "";
-            txeLots3.Text = "";
+            //txeLots1.Text = "";
+            //txeLots2.Text = "";
+            //txeLots3.Text = "";
 
-            txeRemark.Text = "";
-            lblIDVENDItem.Text = "";
+            //txeRemark.Text = "";
+            //lblIDVENDItem.Text = "";
 
-            txeCREATE.Text = "0";
-            txeCDATE.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            txeUPDATE.Text = "0";
-            txeUDATE.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            //txeCREATE.Text = "0";
+            //txeCDATE.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            //txeUPDATE.Text = "0";
+            //txeUDATE.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
-            //**************************************
-            slueFirstVendor.ReadOnly = false;
-            txeMatDetails.ReadOnly = false;
-            txeMatCode.ReadOnly = false;
-            txeSMPLLotNo.ReadOnly = false;
-            txePrice.ReadOnly = false;
-            txeCurrency.ReadOnly = false;
-            rgPurchase.ReadOnly = false;
-            rgTax.ReadOnly = false;
-            txePurchaseLoss.ReadOnly = false;
-            dteFirstReceiptDate.ReadOnly = false;
-            //**************************************
-            string Materialx = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
+            ////**************************************
+            //slueFirstVendor.ReadOnly = false;
+            //txeMatDetails.ReadOnly = false;
+            //txeMatCode.ReadOnly = false;
+            //txeSMPLLotNo.ReadOnly = false;
+            //txePrice.ReadOnly = false;
+            //txeCurrency.ReadOnly = false;
+            //rgPurchase.ReadOnly = false;
+            //rgTax.ReadOnly = false;
+            //txePurchaseLoss.ReadOnly = false;
+            //dteFirstReceiptDate.ReadOnly = false;
+            ////**************************************
+            //string Materialx = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
             StringBuilder sbSQL = new StringBuilder();
-            sbSQL.Append("SELECT OIDCONDQC, ConditionName ");
-            sbSQL.Append("FROM ConditionQC ");
-            sbSQL.Append("WHERE (ItemType = '" + Materialx + "') ");
-            sbSQL.Append("ORDER BY ConditionName ");
-            DataTable drMaterial = new DBQuery(sbSQL).getDataTable();
-            clbQC.ValueMember = "OIDCONDQC";
-            clbQC.DisplayMember = "ConditionName";
-            clbQC.DataSource = drMaterial;
+            //sbSQL.Append("SELECT OIDCONDQC, ConditionName ");
+            //sbSQL.Append("FROM ConditionQC ");
+            //sbSQL.Append("WHERE (ItemType = '" + Materialx + "') ");
+            //sbSQL.Append("ORDER BY ConditionName ");
+            //DataTable drMaterial = new DBQuery(sbSQL).getDataTable();
+            //clbQC.ValueMember = "OIDCONDQC";
+            //clbQC.DisplayMember = "ConditionName";
+            //clbQC.DataSource = drMaterial;
 
             //selCode = "";
             sbSQL.Clear();
@@ -754,92 +754,121 @@ namespace M07
             string[] arrItem = new DBQuery(sbSQL).getMultipleValue();
             if (arrItem.Length > 0)
             {
-                txeID.Text = arrItem[0];
-                txeDescription.Text = arrItem[3];
-                txeComposition.Text = arrItem[4];
-                txeWeight.Text = arrItem[5];
-                txeModelNo.Text = arrItem[6];
-                txeModelName.Text = arrItem[7];
-                slueCategory.EditValue = arrItem[8];
-                slueStyle.EditValue = arrItem[9];
-                slueColor.EditValue = arrItem[10];
-                slueSize.EditValue = arrItem[11];
-                slueCustomer.EditValue = arrItem[12];
-                txeBusinessUnit.Text = arrItem[13];
-                cbeSeason.Text = arrItem[14];
-                cbeClass.Text = arrItem[15];
-                glueBranch.EditValue = arrItem[16];
-                txeCostSheet.Text = arrItem[17];
-                txeStdPrice.Text = arrItem[18];
+                if (FUNC.msgQuiz("The system already has this name. Want to fix it ?") == true)
+                {
+                    txeID.Text = arrItem[0];
+                    txeDescription.Text = arrItem[3];
+                    txeComposition.Text = arrItem[4];
+                    txeWeight.Text = arrItem[5];
+                    txeModelNo.Text = arrItem[6];
+                    txeModelName.Text = arrItem[7];
+                    slueCategory.EditValue = arrItem[8];
+                    slueStyle.EditValue = arrItem[9];
+                    slueColor.EditValue = arrItem[10];
+                    slueSize.EditValue = arrItem[11];
+                    slueCustomer.EditValue = arrItem[12];
+                    txeBusinessUnit.Text = arrItem[13];
+                    cbeSeason.Text = arrItem[14];
+                    cbeClass.Text = arrItem[15];
+                    glueBranch.EditValue = arrItem[16];
+                    txeCostSheet.Text = arrItem[17];
+                    txeStdPrice.Text = arrItem[18];
 
-                slueFirstVendor.EditValue = arrItem[19];
-                //txeMatDetails.Text = "";
-                //txeMatCode.Text = "";
-                //txeSMPLLotNo.Text = "";
-                //txePrice.Text = "";
-                //txeCurrency.Text = "";
-                selectPurchase(Convert.ToInt32(arrItem[20]));
-                selectTax(Convert.ToInt32(arrItem[21]));
+                    slueFirstVendor.EditValue = arrItem[19];
+                    //txeMatDetails.Text = "";
+                    //txeMatCode.Text = "";
+                    //txeSMPLLotNo.Text = "";
+                    //txePrice.Text = "";
+                    //txeCurrency.Text = "";
+                    selectPurchase(Convert.ToInt32(arrItem[20]));
+                    selectTax(Convert.ToInt32(arrItem[21]));
 
-                txePurchaseLoss.Text = arrItem[22];
-                dteFirstReceiptDate.EditValue = Convert.ToDateTime(arrItem[23]);
-                slueDefaultVendor.EditValue = arrItem[24];
+                    txePurchaseLoss.Text = arrItem[22];
+                    dteFirstReceiptDate.EditValue = Convert.ToDateTime(arrItem[23]);
+                    slueDefaultVendor.EditValue = arrItem[24];
 
-                txeSMPLNo.Text = "";
-                dteRequestDate.EditValue = DateTime.Now;
-                txeSMPLItem.Text = "";
-                txeSMPLPatternNo.Text = "";
-                rgZone.SelectedIndex = 0;
+                    txeSMPLNo.Text = "";
+                    dteRequestDate.EditValue = DateTime.Now;
+                    txeSMPLItem.Text = "";
+                    txeSMPLPatternNo.Text = "";
+                    rgZone.SelectedIndex = 0;
 
-                txeMinStock.Text = arrItem[25];
-                txeMaxStock.Text = arrItem[26];
-                txeStockSheifLife.Text = arrItem[27];
-                txeStdCost.Text = arrItem[28];
-                slueDefaultUnit.EditValue = arrItem[29];
-                glueUnit.EditValue = "";
+                    txeMinStock.Text = arrItem[25];
+                    txeMaxStock.Text = arrItem[26];
+                    txeStockSheifLife.Text = arrItem[27];
+                    txeStdCost.Text = arrItem[28];
+                    slueDefaultUnit.EditValue = arrItem[29];
+                    glueUnit.EditValue = "";
 
-                txePath.Text = imgPathFile + arrItem[30];
-                picImg.Image = Image.FromFile(txePath.Text);
+                    txePath.Text = imgPathFile + arrItem[30];
+                    picImg.Image = Image.FromFile(txePath.Text);
 
-                txeLabTestNo.Text = arrItem[31];
-                dteApprovedLabDate.EditValue = Convert.ToDateTime(arrItem[32]);
-                txeQCInspection.Text = arrItem[33];
-                //clbQC.Items.Clear();
+                    txeLabTestNo.Text = arrItem[31];
+                    dteApprovedLabDate.EditValue = Convert.ToDateTime(arrItem[32]);
+                    txeQCInspection.Text = arrItem[33];
+                    //clbQC.Items.Clear();
 
-                slueVendorCode.EditValue = "";
-                txeVendorName.Text = "";
-                txeLotSize.Text = "";
-                txeProductionLead.Text = "";
-                txeDeliveryLead.Text = "";
-                txeArrivalLead.Text = "";
-                txePOCancelPeriod.Text = "";
+                    slueVendorCode.EditValue = "";
+                    txeVendorName.Text = "";
+                    txeLotSize.Text = "";
+                    txeProductionLead.Text = "";
+                    txeDeliveryLead.Text = "";
+                    txeArrivalLead.Text = "";
+                    txePOCancelPeriod.Text = "";
 
-                txeLots1.Text = "";
-                txeLots2.Text = "";
-                txeLots3.Text = "";
+                    txeLots1.Text = "";
+                    txeLots2.Text = "";
+                    txeLots3.Text = "";
 
-                txeRemark.Text = "";
-                lblIDVENDItem.Text = "";
+                    txeRemark.Text = "";
+                    lblIDVENDItem.Text = "";
 
-                txeCREATE.Text = arrItem[34];
-                txeCDATE.Text = arrItem[35];
-                txeUPDATE.Text = arrItem[36];
-                txeUDATE.Text = arrItem[37];
+                    txeCREATE.Text = arrItem[34];
+                    txeCDATE.Text = arrItem[35];
+                    txeUPDATE.Text = arrItem[36];
+                    txeUDATE.Text = arrItem[37];
 
-                //**************************************
-                slueFirstVendor.ReadOnly = true;
-                txeMatDetails.ReadOnly = true;
-                txeMatCode.ReadOnly = true;
-                txeSMPLLotNo.ReadOnly = true;
-                txePrice.ReadOnly = true;
-                txeCurrency.ReadOnly = true;
-                rgPurchase.ReadOnly = true;
-                rgTax.ReadOnly = true;
-                txePurchaseLoss.ReadOnly = true;
-                dteFirstReceiptDate.ReadOnly = true;
-                //**************************************
+                    //**************************************
+                    slueFirstVendor.ReadOnly = true;
+                    txeMatDetails.ReadOnly = true;
+                    txeMatCode.ReadOnly = true;
+                    txeSMPLLotNo.ReadOnly = true;
+                    txePrice.ReadOnly = true;
+                    txeCurrency.ReadOnly = true;
+                    rgPurchase.ReadOnly = true;
+                    rgTax.ReadOnly = true;
+                    txePurchaseLoss.ReadOnly = true;
+                    dteFirstReceiptDate.ReadOnly = true;
+                    //**************************************
+                }
+                else
+                {
+                    txeID.Text = "";
+                    if (rgMaterial.SelectedIndex > -1)
+                    {
+                        string Material = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
+                        txeID.Text = new DBQuery("SELECT CASE WHEN ISNULL(MAX(OIDITEM), '') = '' THEN 1 ELSE MAX(OIDITEM) + 1 END AS NewNo FROM Items WHERE (MaterialType = '" + Material + "') ").getString();
+                    }
+                    glueCode.Text = "";
+                    glueCode.Focus();
 
+                }
             }
+            else
+            {
+                txeID.Text = new DBQuery("SELECT CASE WHEN ISNULL(MAX(OIDCUST), '') = '' THEN 1 ELSE MAX(OIDCUST) + 1 END AS NewNo FROM Customer").getString();
+               
+                //bool chkNameDup = chkDuplicateName();
+                //if (chkNameDup == false)
+                //{
+                //    txeDescription.Text = "";
+                //}
+
+                txeDescription.Focus();
+            }
+
+            selCode = "";
+
 
             sbSQL.Clear();
             sbSQL.Append("SELECT OIDCONDQC ");
@@ -893,6 +922,7 @@ namespace M07
         {
             //txeDescription.Focus();
             //LoadCode(glueCode.Text);
+
         }
 
         private void glueCode_KeyDown(object sender, KeyEventArgs e)
@@ -917,6 +947,7 @@ namespace M07
             sbSQL.Append("WHERE (OIDGCATEGORY = '" + slueCategory.EditValue.ToString() + "') ");
             sbSQL.Append("ORDER BY StyleName ");
             new ObjDevEx.setSearchLookUpEdit(slueStyle, sbSQL, "StyleName", "ID").getData(true);
+            slueStyle.Focus();
         }
 
         private void slueFirstVendor_EditValueChanged(object sender, EventArgs e)
@@ -942,11 +973,14 @@ namespace M07
                 txePrice.Text = arrVEND[3];
                 txeCurrency.Text = arrVEND[4];
             }
+
+            txeMatDetails.Focus();
         }
 
         private void slueDefaultVendor_EditValueChanged(object sender, EventArgs e)
         {
             slueVendorCode.EditValue = slueDefaultVendor.EditValue.ToString();
+            txeMinStock.Focus();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -961,6 +995,8 @@ namespace M07
                 
                 picImg.Image = Image.FromFile(txePath.Text);
             }
+
+            txeLabTestNo.Focus();
         }
 
         private void btnNEW_Click(object sender, EventArgs e)
@@ -1027,6 +1063,7 @@ namespace M07
                 }
             }
             //MessageBox.Show(slueVendorCode.EditValue.ToString());
+            txeVendorName.Focus();
         }
 
         private void btnADD_Click(object sender, EventArgs e)
@@ -1145,6 +1182,340 @@ namespace M07
                 glueCode.Text = glueCode.Text.ToUpper().Trim();
                 selCode = glueCode.Text;
                 LoadCode(glueCode.Text);
+            }
+        }
+
+        private void txeDescription_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeComposition.Focus();
+            }
+        }
+
+        private void txeDescription_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txeComposition_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeWeight.Focus();
+            }
+        }
+
+        private void txeWeight_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeModelNo.Focus();
+            }
+        }
+
+        private void txeModelNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeModelName.Focus();
+            }
+        }
+
+        private void txeModelName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                slueCategory.Focus();
+            }
+        }
+
+        private void slueStyle_EditValueChanged(object sender, EventArgs e)
+        {
+            slueColor.Focus();
+        }
+
+        private void slueColor_EditValueChanged(object sender, EventArgs e)
+        {
+            slueSize.Focus();
+        }
+
+        private void slueSize_EditValueChanged(object sender, EventArgs e)
+        {
+            slueCustomer.Focus();
+        }
+
+        private void slueCustomer_EditValueChanged(object sender, EventArgs e)
+        {
+            txeBusinessUnit.Focus();
+        }
+
+        private void txeBusinessUnit_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cbeSeason.Focus();
+            }
+        }
+
+        private void cbeSeason_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbeClass.Focus();
+        }
+
+        private void cbeClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            glueBranch.Focus();
+        }
+
+        private void glueBranch_EditValueChanged(object sender, EventArgs e)
+        {
+            txeCostSheet.Focus();
+        }
+
+        private void txeCostSheet_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeStdPrice.Focus();
+            }
+        }
+
+        private void txeStdPrice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                slueFirstVendor.Focus();
+            }
+        }
+
+        private void txeMatDetails_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeMatCode.Focus();
+            }
+        }
+
+        private void txeMatCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeSMPLLotNo.Focus();
+            }
+        }
+
+        private void txeSMPLLotNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txePrice.Focus();
+            }
+        }
+
+        private void txePrice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeCurrency.Focus();
+            }
+        }
+
+        private void txeCurrency_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                rgPurchase.Focus();
+            }
+        }
+
+        private void txePurchaseLoss_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dteFirstReceiptDate.Focus();
+            }
+        }
+
+        private void dteFirstReceiptDate_EditValueChanged(object sender, EventArgs e)
+        {
+            slueDefaultVendor.Focus();
+        }
+
+        private void txeMinStock_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeMaxStock.Focus();
+            }
+        }
+
+        private void txeMaxStock_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeStockSheifLife.Focus();
+            }
+        }
+
+        private void txeStockSheifLife_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                txeStdCost.Focus();
+            }
+        }
+
+        private void txeStdCost_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                slueDefaultUnit.Focus();
+            }
+        }
+
+        private void slueDefaultUnit_EditValueChanged(object sender, EventArgs e)
+        {
+            glueUnit.Focus();
+        }
+
+        private void glueUnit_EditValueChanged(object sender, EventArgs e)
+        {
+            btnSelect.Focus();
+        }
+
+        private void txePath_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeLabTestNo.Focus();
+            }
+        }
+
+        private void txeLabTestNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dteApprovedLabDate.Focus();
+            }
+        }
+
+        private void dteApprovedLabDate_EditValueChanged(object sender, EventArgs e)
+        {
+            txeQCInspection.Focus();
+        }
+
+        private void txeQCInspection_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                clbQC.Focus();
+            }
+        }
+
+        private void txeSMPLNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dteRequestDate.Focus();
+            }
+        }
+
+        private void dteRequestDate_EditValueChanged(object sender, EventArgs e)
+        {
+            txeSMPLItem.Focus();
+        }
+
+        private void txeSMPLItem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeSMPLPatternNo.Focus();
+            }
+        }
+
+        private void txeSMPLPatternNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                rgZone.Focus();
+            }
+        }
+
+        private void txeVendorName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeLotSize.Focus();
+            }
+        }
+
+        private void txeProductionLead_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txeLotSize_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeProductionLead.Focus();
+            }
+        }
+
+        private void txeProductionLead_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeDeliveryLead.Focus();
+            }
+        }
+
+        private void txeDeliveryLead_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeArrivalLead.Focus();
+            }
+        }
+
+        private void txeArrivalLead_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txePOCancelPeriod.Focus();
+            }
+        }
+
+        private void txePOCancelPeriod_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeLots1.Focus();
+            }
+        }
+
+        private void txeLots1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeLots2.Focus();
+            }
+        }
+
+        private void txeLots2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeLots3.Focus();
+            }
+        }
+
+        private void txeLots3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txeRemark.Focus();
             }
         }
     }

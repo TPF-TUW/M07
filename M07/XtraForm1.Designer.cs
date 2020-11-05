@@ -528,6 +528,7 @@
             this.txeArrivalLead.Size = new System.Drawing.Size(126, 20);
             this.txeArrivalLead.StyleController = this.layoutControl1;
             this.txeArrivalLead.TabIndex = 77;
+            this.txeArrivalLead.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeArrivalLead_KeyDown);
             // 
             // txeID
             // 
@@ -551,6 +552,7 @@
             this.glueUnit.Size = new System.Drawing.Size(54, 20);
             this.glueUnit.StyleController = this.layoutControl1;
             this.glueUnit.TabIndex = 75;
+            this.glueUnit.EditValueChanged += new System.EventHandler(this.glueUnit_EditValueChanged);
             // 
             // gridLookUpEdit1View
             // 
@@ -630,6 +632,7 @@
             this.txeLots3.Size = new System.Drawing.Size(126, 20);
             this.txeLots3.StyleController = this.layoutControl1;
             this.txeLots3.TabIndex = 68;
+            this.txeLots3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeLots3_KeyDown);
             // 
             // txeLots2
             // 
@@ -638,6 +641,7 @@
             this.txeLots2.Size = new System.Drawing.Size(126, 20);
             this.txeLots2.StyleController = this.layoutControl1;
             this.txeLots2.TabIndex = 67;
+            this.txeLots2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeLots2_KeyDown);
             // 
             // txeLots1
             // 
@@ -648,6 +652,7 @@
             this.txeLots1.Size = new System.Drawing.Size(126, 20);
             this.txeLots1.StyleController = this.layoutControl1;
             this.txeLots1.TabIndex = 66;
+            this.txeLots1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeLots1_KeyDown);
             // 
             // txePOCancelPeriod
             // 
@@ -658,6 +663,7 @@
             this.txePOCancelPeriod.Size = new System.Drawing.Size(126, 20);
             this.txePOCancelPeriod.StyleController = this.layoutControl1;
             this.txePOCancelPeriod.TabIndex = 65;
+            this.txePOCancelPeriod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txePOCancelPeriod_KeyDown);
             // 
             // txeDeliveryLead
             // 
@@ -668,6 +674,7 @@
             this.txeDeliveryLead.Size = new System.Drawing.Size(126, 20);
             this.txeDeliveryLead.StyleController = this.layoutControl1;
             this.txeDeliveryLead.TabIndex = 64;
+            this.txeDeliveryLead.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeDeliveryLead_KeyDown);
             // 
             // txeProductionLead
             // 
@@ -678,6 +685,8 @@
             this.txeProductionLead.Size = new System.Drawing.Size(126, 20);
             this.txeProductionLead.StyleController = this.layoutControl1;
             this.txeProductionLead.TabIndex = 63;
+            this.txeProductionLead.EditValueChanged += new System.EventHandler(this.txeProductionLead_EditValueChanged);
+            this.txeProductionLead.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeProductionLead_KeyDown);
             // 
             // txeLotSize
             // 
@@ -688,6 +697,7 @@
             this.txeLotSize.Size = new System.Drawing.Size(126, 20);
             this.txeLotSize.StyleController = this.layoutControl1;
             this.txeLotSize.TabIndex = 62;
+            this.txeLotSize.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeLotSize_KeyDown);
             // 
             // txeVendorName
             // 
@@ -696,6 +706,7 @@
             this.txeVendorName.Size = new System.Drawing.Size(126, 20);
             this.txeVendorName.StyleController = this.layoutControl1;
             this.txeVendorName.TabIndex = 61;
+            this.txeVendorName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeVendorName_KeyDown);
             // 
             // slueVendorCode
             // 
@@ -734,6 +745,7 @@
             this.txeQCInspection.Size = new System.Drawing.Size(54, 20);
             this.txeQCInspection.StyleController = this.layoutControl1;
             this.txeQCInspection.TabIndex = 58;
+            this.txeQCInspection.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeQCInspection_KeyDown);
             // 
             // dteApprovedLabDate
             // 
@@ -747,6 +759,7 @@
             this.dteApprovedLabDate.Size = new System.Drawing.Size(54, 20);
             this.dteApprovedLabDate.StyleController = this.layoutControl1;
             this.dteApprovedLabDate.TabIndex = 57;
+            this.dteApprovedLabDate.EditValueChanged += new System.EventHandler(this.dteApprovedLabDate_EditValueChanged);
             // 
             // txeLabTestNo
             // 
@@ -756,6 +769,7 @@
             this.txeLabTestNo.Size = new System.Drawing.Size(54, 20);
             this.txeLabTestNo.StyleController = this.layoutControl1;
             this.txeLabTestNo.TabIndex = 56;
+            this.txeLabTestNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeLabTestNo_KeyDown);
             // 
             // btnSelect
             // 
@@ -774,6 +788,7 @@
             this.txePath.Size = new System.Drawing.Size(154, 20);
             this.txePath.StyleController = this.layoutControl1;
             this.txePath.TabIndex = 54;
+            this.txePath.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txePath_KeyDown);
             // 
             // slueDefaultUnit
             // 
@@ -786,6 +801,7 @@
             this.slueDefaultUnit.Size = new System.Drawing.Size(54, 20);
             this.slueDefaultUnit.StyleController = this.layoutControl1;
             this.slueDefaultUnit.TabIndex = 52;
+            this.slueDefaultUnit.EditValueChanged += new System.EventHandler(this.slueDefaultUnit_EditValueChanged);
             // 
             // searchLookUpEdit8View
             // 
@@ -803,6 +819,7 @@
             this.txeStdCost.Size = new System.Drawing.Size(54, 20);
             this.txeStdCost.StyleController = this.layoutControl1;
             this.txeStdCost.TabIndex = 51;
+            this.txeStdCost.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeStdCost_KeyDown);
             // 
             // txeStockSheifLife
             // 
@@ -813,6 +830,7 @@
             this.txeStockSheifLife.Size = new System.Drawing.Size(54, 20);
             this.txeStockSheifLife.StyleController = this.layoutControl1;
             this.txeStockSheifLife.TabIndex = 50;
+            this.txeStockSheifLife.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeStockSheifLife_KeyDown);
             // 
             // txeMaxStock
             // 
@@ -823,6 +841,7 @@
             this.txeMaxStock.Size = new System.Drawing.Size(54, 20);
             this.txeMaxStock.StyleController = this.layoutControl1;
             this.txeMaxStock.TabIndex = 49;
+            this.txeMaxStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeMaxStock_KeyDown);
             // 
             // txeMinStock
             // 
@@ -833,6 +852,7 @@
             this.txeMinStock.Size = new System.Drawing.Size(54, 20);
             this.txeMinStock.StyleController = this.layoutControl1;
             this.txeMinStock.TabIndex = 48;
+            this.txeMinStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeMinStock_KeyDown);
             // 
             // rgZone
             // 
@@ -853,6 +873,7 @@
             this.txeSMPLPatternNo.Size = new System.Drawing.Size(98, 20);
             this.txeSMPLPatternNo.StyleController = this.layoutControl1;
             this.txeSMPLPatternNo.TabIndex = 46;
+            this.txeSMPLPatternNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeSMPLPatternNo_KeyDown);
             // 
             // txeSMPLItem
             // 
@@ -861,6 +882,7 @@
             this.txeSMPLItem.Size = new System.Drawing.Size(98, 20);
             this.txeSMPLItem.StyleController = this.layoutControl1;
             this.txeSMPLItem.TabIndex = 45;
+            this.txeSMPLItem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeSMPLItem_KeyDown);
             // 
             // dteRequestDate
             // 
@@ -874,6 +896,7 @@
             this.dteRequestDate.Size = new System.Drawing.Size(98, 20);
             this.dteRequestDate.StyleController = this.layoutControl1;
             this.dteRequestDate.TabIndex = 44;
+            this.dteRequestDate.EditValueChanged += new System.EventHandler(this.dteRequestDate_EditValueChanged);
             // 
             // txeSMPLNo
             // 
@@ -882,6 +905,7 @@
             this.txeSMPLNo.Size = new System.Drawing.Size(98, 20);
             this.txeSMPLNo.StyleController = this.layoutControl1;
             this.txeSMPLNo.TabIndex = 43;
+            this.txeSMPLNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeSMPLNo_KeyDown);
             // 
             // picImg
             // 
@@ -926,6 +950,7 @@
             this.dteFirstReceiptDate.Size = new System.Drawing.Size(184, 20);
             this.dteFirstReceiptDate.StyleController = this.layoutControl1;
             this.dteFirstReceiptDate.TabIndex = 40;
+            this.dteFirstReceiptDate.EditValueChanged += new System.EventHandler(this.dteFirstReceiptDate_EditValueChanged);
             // 
             // txePurchaseLoss
             // 
@@ -936,6 +961,7 @@
             this.txePurchaseLoss.Size = new System.Drawing.Size(184, 20);
             this.txePurchaseLoss.StyleController = this.layoutControl1;
             this.txePurchaseLoss.TabIndex = 39;
+            this.txePurchaseLoss.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txePurchaseLoss_KeyDown);
             // 
             // rgTax
             // 
@@ -971,6 +997,7 @@
             this.txeCurrency.Size = new System.Drawing.Size(184, 20);
             this.txeCurrency.StyleController = this.layoutControl1;
             this.txeCurrency.TabIndex = 36;
+            this.txeCurrency.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeCurrency_KeyDown);
             // 
             // txePrice
             // 
@@ -981,6 +1008,7 @@
             this.txePrice.Size = new System.Drawing.Size(184, 20);
             this.txePrice.StyleController = this.layoutControl1;
             this.txePrice.TabIndex = 33;
+            this.txePrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txePrice_KeyDown);
             // 
             // txeSMPLLotNo
             // 
@@ -990,6 +1018,7 @@
             this.txeSMPLLotNo.Size = new System.Drawing.Size(184, 20);
             this.txeSMPLLotNo.StyleController = this.layoutControl1;
             this.txeSMPLLotNo.TabIndex = 32;
+            this.txeSMPLLotNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeSMPLLotNo_KeyDown);
             // 
             // txeMatCode
             // 
@@ -999,6 +1028,7 @@
             this.txeMatCode.Size = new System.Drawing.Size(184, 20);
             this.txeMatCode.StyleController = this.layoutControl1;
             this.txeMatCode.TabIndex = 31;
+            this.txeMatCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeMatCode_KeyDown);
             // 
             // txeMatDetails
             // 
@@ -1008,6 +1038,7 @@
             this.txeMatDetails.Size = new System.Drawing.Size(184, 20);
             this.txeMatDetails.StyleController = this.layoutControl1;
             this.txeMatDetails.TabIndex = 30;
+            this.txeMatDetails.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeMatDetails_KeyDown);
             // 
             // slueCustomer
             // 
@@ -1020,6 +1051,7 @@
             this.slueCustomer.Size = new System.Drawing.Size(124, 20);
             this.slueCustomer.StyleController = this.layoutControl1;
             this.slueCustomer.TabIndex = 29;
+            this.slueCustomer.EditValueChanged += new System.EventHandler(this.slueCustomer_EditValueChanged);
             // 
             // searchLookUpEdit6View
             // 
@@ -1039,6 +1071,7 @@
             this.slueSize.Size = new System.Drawing.Size(202, 20);
             this.slueSize.StyleController = this.layoutControl1;
             this.slueSize.TabIndex = 28;
+            this.slueSize.EditValueChanged += new System.EventHandler(this.slueSize_EditValueChanged);
             // 
             // searchLookUpEdit5View
             // 
@@ -1058,6 +1091,7 @@
             this.slueColor.Size = new System.Drawing.Size(202, 20);
             this.slueColor.StyleController = this.layoutControl1;
             this.slueColor.TabIndex = 27;
+            this.slueColor.EditValueChanged += new System.EventHandler(this.slueColor_EditValueChanged);
             // 
             // searchLookUpEdit4View
             // 
@@ -1077,6 +1111,7 @@
             this.slueStyle.Size = new System.Drawing.Size(202, 20);
             this.slueStyle.StyleController = this.layoutControl1;
             this.slueStyle.TabIndex = 26;
+            this.slueStyle.EditValueChanged += new System.EventHandler(this.slueStyle_EditValueChanged);
             // 
             // searchLookUpEdit3View
             // 
@@ -1134,6 +1169,7 @@
             this.txeStdPrice.Size = new System.Drawing.Size(124, 20);
             this.txeStdPrice.StyleController = this.layoutControl1;
             this.txeStdPrice.TabIndex = 23;
+            this.txeStdPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeStdPrice_KeyDown);
             // 
             // txeCostSheet
             // 
@@ -1144,6 +1180,7 @@
             this.txeCostSheet.Size = new System.Drawing.Size(124, 20);
             this.txeCostSheet.StyleController = this.layoutControl1;
             this.txeCostSheet.TabIndex = 22;
+            this.txeCostSheet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeCostSheet_KeyDown);
             // 
             // glueBranch
             // 
@@ -1156,6 +1193,7 @@
             this.glueBranch.Size = new System.Drawing.Size(124, 20);
             this.glueBranch.StyleController = this.layoutControl1;
             this.glueBranch.TabIndex = 21;
+            this.glueBranch.EditValueChanged += new System.EventHandler(this.glueBranch_EditValueChanged);
             // 
             // gridLookUpEdit7View
             // 
@@ -1175,6 +1213,7 @@
             this.cbeClass.Size = new System.Drawing.Size(54, 20);
             this.cbeClass.StyleController = this.layoutControl1;
             this.cbeClass.TabIndex = 20;
+            this.cbeClass.SelectedIndexChanged += new System.EventHandler(this.cbeClass_SelectedIndexChanged);
             // 
             // cbeSeason
             // 
@@ -1187,6 +1226,7 @@
             this.cbeSeason.Size = new System.Drawing.Size(54, 20);
             this.cbeSeason.StyleController = this.layoutControl1;
             this.cbeSeason.TabIndex = 19;
+            this.cbeSeason.SelectedIndexChanged += new System.EventHandler(this.cbeSeason_SelectedIndexChanged);
             // 
             // txeBusinessUnit
             // 
@@ -1196,6 +1236,7 @@
             this.txeBusinessUnit.Size = new System.Drawing.Size(124, 20);
             this.txeBusinessUnit.StyleController = this.layoutControl1;
             this.txeBusinessUnit.TabIndex = 18;
+            this.txeBusinessUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeBusinessUnit_KeyDown);
             // 
             // glueCode
             // 
@@ -1231,6 +1272,7 @@
             this.txeModelName.Size = new System.Drawing.Size(257, 20);
             this.txeModelName.StyleController = this.layoutControl1;
             this.txeModelName.TabIndex = 11;
+            this.txeModelName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeModelName_KeyDown);
             // 
             // txeModelNo
             // 
@@ -1241,6 +1283,7 @@
             this.txeModelNo.Size = new System.Drawing.Size(177, 20);
             this.txeModelNo.StyleController = this.layoutControl1;
             this.txeModelNo.TabIndex = 10;
+            this.txeModelNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeModelNo_KeyDown);
             // 
             // txeWeight
             // 
@@ -1250,6 +1293,7 @@
             this.txeWeight.Size = new System.Drawing.Size(257, 20);
             this.txeWeight.StyleController = this.layoutControl1;
             this.txeWeight.TabIndex = 9;
+            this.txeWeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeWeight_KeyDown);
             // 
             // txeComposition
             // 
@@ -1259,6 +1303,7 @@
             this.txeComposition.Size = new System.Drawing.Size(257, 20);
             this.txeComposition.StyleController = this.layoutControl1;
             this.txeComposition.TabIndex = 8;
+            this.txeComposition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeComposition_KeyDown);
             // 
             // txeDescription
             // 
@@ -1268,6 +1313,8 @@
             this.txeDescription.Size = new System.Drawing.Size(257, 20);
             this.txeDescription.StyleController = this.layoutControl1;
             this.txeDescription.TabIndex = 7;
+            this.txeDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txeDescription_KeyDown);
+            this.txeDescription.Leave += new System.EventHandler(this.txeDescription_Leave);
             // 
             // rgMaterial
             // 
