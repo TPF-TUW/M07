@@ -905,43 +905,7 @@ namespace M07
 
         private void glueCode_LostFocus(object sender, EventArgs e)
         {
-            if (glueCode.Text.Trim() != "" && glueCode.Text.ToUpper().Trim() != selCode)
-            {
-                glueCode.Text = glueCode.Text.ToUpper().Trim();
-                selCode = glueCode.Text;
-                LoadCode(glueCode.Text);
-                //MessageBox.Show(glueCode.Text);
-            }
-
-            //string gCode = glueCode.Text.ToUpper().Trim();
-
-            //if (glueCode.Text != "" && rgMaterial.SelectedIndex > -1)
-            //{
-            //    string Material = rgMaterial.Properties.Items[rgMaterial.SelectedIndex].Value.ToString();
-            //    StringBuilder sbSQLx = new StringBuilder();
-            //    sbSQLx.Append("SELECT OIDITEM FROM Items WHERE (MaterialType = '" + Material + "') AND (Code=N'" + gCode.Replace("'", "''") + "') ");
-            //    string chkCode = new DBQuery(sbSQLx).getString();
-
-            //    if (chkCode == "")
-            //    {
-            //        sbSQLx.Clear();
-            //        sbSQLx.Append("SELECT Code, Description ");
-            //        sbSQLx.Append("FROM  Items ");
-            //        sbSQLx.Append("WHERE (MaterialType = '" + Material + "')");
-            //        sbSQLx.Append("UNION ALL ");
-            //        sbSQLx.Append("SELECT N'' AS Code, N'' AS Description ");
-            //        sbSQLx.Append("UNION ALL ");
-            //        sbSQLx.Append("SELECT N'" + gCode.Replace("'", "''") + "' AS Code, N'' AS Description ");
-            //        sbSQLx.Append("ORDER BY Code, Description ");
-            //        new ObjDevEx.setGridLookUpEdit(glueCode, sbSQLx, "Code", "Code").getData(true);
-
-            //        if (gCode != "")
-            //        {
-            //            glueCode.Text = gCode;
-            //        }
-            //    }
-
-            //}
+           
 
         }
 
@@ -1174,5 +1138,14 @@ namespace M07
             if (newValue == String.Empty) return;
         }
 
+        private void glueCode_Leave(object sender, EventArgs e)
+        {
+            if (glueCode.Text.Trim() != "" && glueCode.Text.ToUpper().Trim() != selCode)
+            {
+                glueCode.Text = glueCode.Text.ToUpper().Trim();
+                selCode = glueCode.Text;
+                LoadCode(glueCode.Text);
+            }
+        }
     }
 }

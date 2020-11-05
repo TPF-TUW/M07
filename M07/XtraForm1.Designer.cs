@@ -215,12 +215,12 @@
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonControl2 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar2 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeArrivalLead.Properties)).BeginInit();
@@ -1213,6 +1213,7 @@
             this.glueCode.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.glueCode_Closed);
             this.glueCode.EditValueChanged += new System.EventHandler(this.glueCode_EditValueChanged);
             this.glueCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.glueCode_KeyDown);
+            this.glueCode.Leave += new System.EventHandler(this.glueCode_Leave);
             this.glueCode.LostFocus += new System.EventHandler(this.glueCode_LostFocus);
             // 
             // gridLookUpEdit2View
@@ -2296,6 +2297,13 @@
             this.ribbonControl2.Size = new System.Drawing.Size(994, 160);
             this.ribbonControl2.StatusBar = this.ribbonStatusBar2;
             // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "[MDS : Merchandise and Development System ] There is a problem. Please contact. [" +
+    " Tel .312 ]";
+            this.barStaticItem1.Id = 1;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -2335,13 +2343,6 @@
             this.ribbonStatusBar2.Name = "ribbonStatusBar2";
             this.ribbonStatusBar2.Ribbon = this.ribbonControl2;
             this.ribbonStatusBar2.Size = new System.Drawing.Size(994, 24);
-            // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Caption = "[MDS : Merchandise and Development System ] There is a problem. Please contact. [" +
-    " Tel .312 ]";
-            this.barStaticItem1.Id = 1;
-            this.barStaticItem1.Name = "barStaticItem1";
             // 
             // XtraForm1
             // 
