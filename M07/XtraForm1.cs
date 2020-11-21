@@ -48,7 +48,12 @@ namespace M07
             glueCode.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             glueCode.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.True;
 
-            bbiNew.PerformClick();
+            NewData();
+            LoadData();
+            if (rgMaterial.SelectedIndex > -1)
+            {
+                LoadDataMeterial();
+            }
         }
 
         private void NewData()
