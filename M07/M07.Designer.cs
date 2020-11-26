@@ -560,6 +560,8 @@
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridLookUpEdit1View.OptionsView.EnableAppearanceOddRow = true;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // txeUDATE
@@ -727,6 +729,8 @@
             this.searchLookUpEdit10View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit10View.Name = "searchLookUpEdit10View";
             this.searchLookUpEdit10View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit10View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit10View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit10View.OptionsView.ShowGroupPanel = false;
             // 
             // clbQC
@@ -809,6 +813,8 @@
             this.searchLookUpEdit8View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit8View.Name = "searchLookUpEdit8View";
             this.searchLookUpEdit8View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit8View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit8View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit8View.OptionsView.ShowGroupPanel = false;
             // 
             // txeStdCost
@@ -939,6 +945,8 @@
             this.searchLookUpEdit7View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit7View.Name = "searchLookUpEdit7View";
             this.searchLookUpEdit7View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit7View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit7View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit7View.OptionsView.ShowGroupPanel = false;
             // 
             // dteFirstReceiptDate
@@ -1061,6 +1069,8 @@
             this.searchLookUpEdit6View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit6View.Name = "searchLookUpEdit6View";
             this.searchLookUpEdit6View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit6View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit6View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit6View.OptionsView.ShowGroupPanel = false;
             // 
             // slueSize
@@ -1081,6 +1091,8 @@
             this.searchLookUpEdit5View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit5View.Name = "searchLookUpEdit5View";
             this.searchLookUpEdit5View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit5View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit5View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit5View.OptionsView.ShowGroupPanel = false;
             // 
             // slueColor
@@ -1101,6 +1113,8 @@
             this.searchLookUpEdit4View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit4View.Name = "searchLookUpEdit4View";
             this.searchLookUpEdit4View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit4View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit4View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit4View.OptionsView.ShowGroupPanel = false;
             // 
             // slueStyle
@@ -1121,6 +1135,8 @@
             this.searchLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit3View.Name = "searchLookUpEdit3View";
             this.searchLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit3View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit3View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit3View.OptionsView.ShowGroupPanel = false;
             // 
             // slueCategory
@@ -1141,6 +1157,8 @@
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // slueFirstVendor
@@ -1161,6 +1179,8 @@
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.EnableAppearanceEvenRow = true;
+            this.searchLookUpEdit1View.OptionsView.EnableAppearanceOddRow = true;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // txeStdPrice
@@ -1203,6 +1223,8 @@
             this.gridLookUpEdit7View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit7View.Name = "gridLookUpEdit7View";
             this.gridLookUpEdit7View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit7View.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridLookUpEdit7View.OptionsView.EnableAppearanceOddRow = true;
             this.gridLookUpEdit7View.OptionsView.ShowGroupPanel = false;
             // 
             // cbeClass
@@ -1265,6 +1287,8 @@
             this.gridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit2View.Name = "gridLookUpEdit2View";
             this.gridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit2View.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridLookUpEdit2View.OptionsView.EnableAppearanceOddRow = true;
             this.gridLookUpEdit2View.OptionsView.ShowGroupPanel = false;
             // 
             // txeModelName
