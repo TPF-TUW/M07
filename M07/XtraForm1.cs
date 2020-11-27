@@ -254,8 +254,8 @@ namespace M07
             new ObjDevEx.setComboboxEdit(cbeClass, sbSQL).getDataRange();
 
             sbSQL.Clear();
-            sbSQL.Append("SELECT OIDBranch AS ID, Branch ");
-            sbSQL.Append("FROM  Branch ");
+            sbSQL.Append("SELECT OIDBranch AS ID, Name AS Branch ");
+            sbSQL.Append("FROM  Branchs ");
             sbSQL.Append("ORDER BY OIDBranch ");
             new ObjDevEx.setGridLookUpEdit(glueBranch, sbSQL, "Branch", "ID").getData(true);
 
