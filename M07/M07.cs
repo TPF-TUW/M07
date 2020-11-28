@@ -27,9 +27,31 @@ namespace M07
             UserLookAndFeel.Default.StyleChanged += MyStyleChanged;
             iniConfig = new IniFile("Config.ini");
             UserLookAndFeel.Default.SetSkinStyle(iniConfig.Read("SkinName", "DevExpress"), iniConfig.Read("SkinPalette", "DevExpress"));
+            CreateSplashScreen();
         }
 
         private IniFile iniConfig;
+
+        private void CreateSplashScreen()
+        {
+            DevExpress.XtraSplashScreen.SplashScreenManager.ShowSkinSplashScreen(
+                logoImage: null,
+                title: "MDS",
+                subtitle: "Merchandise and Development System",
+                footer: "Copyright © 2020-2021 IT Integration Team",
+                loading: "Starting...",
+                parentForm: this,
+                useFadeIn: true,
+                useFadeOut: true,
+                throwExceptionIfAlreadyOpened: true,
+                startPos: DevExpress.XtraSplashScreen.SplashFormStartPosition.Default,
+                location: default
+                );
+        }
+        private void CloseSplashScreen()
+        {
+            DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+        }
 
         private void MyStyleChanged(object sender, EventArgs e)
         {
@@ -54,6 +76,7 @@ namespace M07
             {
                 LoadDataMeterial();
             }
+            CloseSplashScreen();
         }
 
         private void NewData()
